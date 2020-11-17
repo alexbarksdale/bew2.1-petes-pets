@@ -7,6 +7,9 @@ block content
             legend New Pet
             form(action=`/pets/${pet._id}?_method=PUT`, method="POST")
                 .form-group
+                    label Price*
+                    textarea.form-control(name="price" required type="number")
+                .form-group
                     label Name
                     input.form-control(name="name" value=pet.name)
                 .form-group
